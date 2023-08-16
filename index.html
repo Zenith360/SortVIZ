@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="javascript/sorting.js"></script>
+    <script defer src="javascript/algorithms/bubble.js"></script>
+    <script defer src="javascript/algorithms/insertion.js"></script>
+    <script defer src="javascript/algorithms/merge.js"></script>
+    <script defer src="javascript/algorithms/quick.js"></script>
+    <script defer src="javascript/algorithms/selection.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sorting Visualizer</h1>
+
+        <nav>
+            <div class="row">
+                <div class="ary-opt" id="newArray">
+                    <button type="button" class="newArray">New Array</button>
+                    <button type="button" class="reload">Reload</button>
+                </div>
+
+                <div class="sliders" id="input">
+                    <span id="size">
+                        <p>Array Size</p>
+                        <input id="arr_sz" type="range" min="5" max="300" step=1 value=150>
+                    </span>
+
+                    <span id="speed">
+                        <p>Animation Speed</p>
+                        <input id="speed_input" type="range" min="10" max="1000" stepDown=10 value=1000>
+                    </span>
+                </div>
+
+                <div class = 'container'>
+                    <div class="slct-sort">
+                    <button type="button" class="bubbleSort">Bubble Sort
+                        <span class="tip">
+                            Average complexity: O(n<sup>2</sup>)<br>
+                            Best complexity: O(n)<br>
+                            Worst complexity: O(n<sup>2</sup>)<br>
+                            Space complexity: O(1)<br>
+                            Stable: Yes
+                        </span>
+                    </button>
+                    <button type="button" class="selectionSort">Selection Sort
+                        <span class="tip">
+                            Average complexity: O(n<sup>2</sup>)<br>
+                            Best complexity: O(n<sup>2</sup>)<br>
+                            Worst complexity: O(n<sup>2</sup>)<br>
+                            Space complexity: O(1)<br>
+                            Stable: No
+                        </span>
+                    </button>
+                    <button type="button" class="insertionSort">Insertion Sort
+                        <span class="tip">
+                            Average complexity: O(n<sup>2</sup>)<br>
+                            Best complexity: O(n)<br>
+                            Worst complexity: O(n<sup>2</sup>)<br>
+                            Space complexity: O(1)<br>
+                            Stable: Yes
+                        </span>
+                    </button>
+                    <button type="button" class="quickSort">Quick Sort
+                        <span class="tip">
+                            Average complexity: O(n*log n)<br>
+                            Best complexity: O(n*log n )<br>
+                            Worst complexity: O(n<sup>2</sup>)<br>
+                            Space complexity: O(n)<br>
+                            Stable: No
+                        </span>
+                    </button>
+                    <button type="button" class="mergeSort">Merge Sort
+                        <span class="tip">
+                            Average complexity: O(n*log n)<br>
+                            Best complexity: O(n*log n)<br>
+                            Worst complexity: O(n*log n)<br>
+                            Space complexity: O(n)<br>
+                            Stable: Yes
+                        </span>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="bars" class="flex-container"></div>
+
+    <div class = 'sort'>
+        <h1>Bubble Sort</h1>
+        <p>
+        Bubble sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order.<br>It continues this process until the entire list is sorted. While easy to understand, it is not efficient for large datasets.
+        </p>
+        <hr>
+    </div>
+    <div class = 'sort'>
+        <h1>Insertion Sort</h1>
+        <p>
+            Insertion sort works by iteratively building a final sorted array one element at a time.<br>It selects an element and inserts it into its correct position within the already sorted part of the array, shifting other elements if necessary. It performs well on small or nearly sorted lists.
+        </p>
+        <hr>
+    </div>
+    <div class = 'sort'>
+        <h1>Quick Sort</h1>
+        <p>
+            Quick sort is another divide-and-conquer algorithm that selects a pivot element and partitions the array around the pivot, such that elements smaller than the pivot are placed before it, and elements larger than the pivot are placed after it.<br>
+            This process is recursively applied to the subarrays until the entire array is sorted. It is widely used and efficient in practice.
+        </p>
+        <hr>
+    </div>
+    <div class = 'sort'>
+        <h1>Merge Sort</h1>
+        <p>
+            Merge sort is a divide-and-conquer algorithm that divides the unsorted list into smaller sublists, sorts them, and then merges them to obtain a final sorted list.<br>It requires additional space for the merging process.
+        </p>
+        <hr>
+    </div>
+    <div class = 'sort'>
+        <h1>Selection Sort</h1>
+        <p>
+            Selection sort is an in-place comparison-based sorting algorithm. It works by repeatedly finding the minimum element from the unsorted part of the array and placing it at the beginning.<br>This process is repeated until the entire array is sorted.
+        </p>
+        <hr>
+    </div>
+</body>
+</html>
